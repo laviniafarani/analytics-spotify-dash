@@ -1,6 +1,6 @@
 # Spotify Dash
 
-This project leverages the Spotify API to create an interactive dashboard that displays various music-related insights.
+This project leverages the Spotify API to create an interactive dashboard that displays various music-related insights. **Please note that this project is still under construction, and features are being actively developed.**
 
 ## Setup Instructions
 Follow these steps to set up and run the project on your local machine.

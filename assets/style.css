@@ -1,0 +1,77 @@
+/* Text Style */
+
+.title-text{
+    color: #ffffff; /* White text color */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 22px;
+}
+
+.sub-title-text{
+    color: #ffffff; /* White text color */
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.text-gray {
+    color: #A7A7A7;
+    font-size: small; /* Gray text color */
+}
+
+.text-white {
+    color: #ffffff; /* White text color */
+}
+
+/* Background */
+.main-background{
+    background-color: #000000;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.row-bottom-margin{
+    margin-bottom: 10px;
+}
+
+.box{
+    border-radius: 10px;
+    background-color: #121212;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 92%;
+}
+
+
+/* TOPs Info */
+.image-position {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.info-tops-position {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Songs */
+.image-song-style {
+    border-radius: 8px; /*Radius the image border */
+    object-fit: cover;
+    width: 100px;
+    height: 50px
+}
+
+/* Artists */
+.image-artist-style {
+    border-radius: 50px; /*Radius the image border */
+    object-fit: cover;
+    width: 100px; /*Keeps the image responsive*/
+    height: 50px; /*Keeps the image responsive*/
+}
+
+
+

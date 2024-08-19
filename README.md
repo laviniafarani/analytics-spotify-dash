@@ -64,9 +64,9 @@ With everything set up, you can now run the project.
 Ensure the Virtual Environment is Activated:
 If it’s not already activated, follow the activation steps in the Set Up a Virtual Environment section.
 
-- Execute the Main Script<br>
+- Execute the App Script<br>
 Run the following command to start the application:
 
     ```bash
-    python3 main.py
+    python3 app.py
     ```

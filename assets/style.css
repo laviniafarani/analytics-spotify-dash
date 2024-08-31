@@ -22,6 +22,12 @@
     color: #ffffff; /* White text color */
 }
 
+.sub-sub-title-text{
+    color: #A7A7A7; /* White text color */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 /* Background */
 .main-background{
     background-color: #000000;

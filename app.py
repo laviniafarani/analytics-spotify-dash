@@ -1,6 +1,6 @@
 from dash import Dash, html
 import dash_bootstrap_components as dbc
-from template import template_top_songs, template_top_artists, put_title
+from template import *
 
 app = Dash(
     __name__,
@@ -38,7 +38,10 @@ app.layout = dbc.Container(
                         template_top_artists(1),
                         template_top_artists(2),
                         template_top_artists(3),
-                        template_top_artists(4)
+                        template_top_artists(4),
+                        html.H3("Popularity", className="sub-title-text"),
+                        template_pop_titles(),
+                        template_popularity()
                     ], className="box"
                 ),
                 width=4,

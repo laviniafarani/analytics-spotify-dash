@@ -53,7 +53,7 @@ def template_popularity():
                             target='_blank',
                             className= 'image-position',
                         ),
-                        width=2
+                        width=3
                     ),
                     dbc.Col(
                         [
@@ -65,7 +65,7 @@ def template_popularity():
                             ),
                         ],
                         className="info-tops-position",
-                        width=4
+                        width=3
                     ),
                     ### Max Pop
                     dbc.Col(
@@ -80,7 +80,7 @@ def template_popularity():
                             target='_blank',
                             className= 'image-position',
                         ),
-                        width=2
+                        width=3
                     ),
                     dbc.Col(
                         [
@@ -92,7 +92,7 @@ def template_popularity():
                             ),
                         ],
                         className="info-tops-position",
-                        width=4
+                        width=3
                     )
             ],
             className='row-bottom-margin'

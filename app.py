@@ -23,7 +23,10 @@ app.layout = dbc.Container(
                         template_top_songs(1),
                         template_top_songs(2),
                         template_top_songs(3),
-                        template_top_songs(4)
+                        template_top_songs(4),
+                        html.H3("BPM", className="sub-title-text"),
+                        template_bpm_titles(),
+                        template_bpm()
                     ], className="box"
                 ),
                 width=4,

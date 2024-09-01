@@ -15,4 +15,10 @@ def template_pop_titles():
         dbc.Col(html.Div('Most Popular', className="sub-sub-title-text")),
     ])
 
+def template_bpm_titles():
+    return dbc.Row([
+        dbc.Col(html.Div('Lowest BPM', className="sub-sub-title-text")),
+        dbc.Col(html.Div('Highest BPM', className="sub-sub-title-text")),
+    ])
+
 

@@ -6,6 +6,8 @@ def get_user_top_tracks(limit=25, time_range='short_term'):
     long_term: (calculated from ~1 year of data and including all new data as it becomes available),
     medium_term: (approximately last 6 months)
     short_term: (approximately last 4 weeks)
+
+    https://developer.spotify.com/documentation/web-api/reference/get-audio-features
     '''
     if not (3 <= limit <= 25):
         raise ValueError("The 'limit' parameter must be between 3 and 25. Default is 25.")
@@ -36,11 +38,22 @@ def get_user_top_tracks(limit=25, time_range='short_term'):
     df_user_top_tracks = pd.DataFrame(user_top_track_data, columns=user_top_tracks_columns)
     df_user_top_tracks['release_year'] = df_user_top_tracks['release_year'].str[:4]
 
-    return df_user_top_tracks
-
-
-def get_tracks_audio_features(tracks_id):
-    audio_features = sp().audio_features(tracks_id)
+    audio_features = sp().audio_features(df_user_top_tracks['track_id'])
     df_audio_features = pd.DataFrame(audio_features)
 
-    return df_audio_features
+    tracks_info = pd.merge(
+        df_user_top_tracks,
+        df_audio_features,
+        left_on='track_id',
+        right_on='id'
+    )
+    columns=[
+        'track_name', 'artist_name', 'album_name',
+        'danceability', 'valence', 'energy', 'tempo',
+        'key', 'mode', 'time_signature', 'loudness',
+        'speechiness', 'instrumentalness','acousticness',
+        'liveness', 'duration_ms', 'release_year',
+        'track_id', 'artist_id', 'song_image_url','song_url'
+    ]
+
+    return tracks_info[columns]

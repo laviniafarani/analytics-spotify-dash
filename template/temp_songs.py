@@ -34,3 +34,66 @@ def template_top_songs(index):
             ],
             className='row-bottom-margin'
         )
+
+
+def template_bpm():
+    min_track_bpm = tracks.min_bpm()
+    max_track_bpm = tracks.max_bpm()
+    return  dbc.Row([
+                    ###  Min Pop
+                    dbc.Col(
+                        html.A(
+                            html.Img(
+                                src=min_track_bpm['song_image_url'],
+                                alt='Description of my image',
+                                style={'width': '50%'},
+                                className="image-song-style"
+                            ),
+                            href=min_track_bpm['song_url'],
+                            target='_blank',
+                            className= 'image-position',
+                        ),
+                        width=3
+                    ),
+                    dbc.Col(
+                        [
+                            html.Div(
+                                min_track_bpm['track_name'], className="text-white"
+                            ),
+                            html.Div(
+                                round(min_track_bpm['tempo'], 0), className="text-gray"
+                            ),
+                        ],
+                        className="info-tops-position",
+                        width=3
+                    ),
+                    ### Max Pop
+                    dbc.Col(
+                        html.A(
+                            html.Img(
+                                src=max_track_bpm['song_image_url'],
+                                alt='Description of my image',
+                                style={'width': '50%'},
+                                className="image-song-style"
+                            ),
+                            href=max_track_bpm['song_url'],
+                            target='_blank',
+                            className= 'image-position',
+                        ),
+                        width=3
+                    ),
+                    dbc.Col(
+                        [
+                            html.Div(
+                                max_track_bpm['track_name'], className="text-white"
+                            ),
+                            html.Div(
+                                round(max_track_bpm['tempo'],0), className="text-gray"
+                            ),
+                        ],
+                        className="info-tops-position",
+                        width=3
+                    )
+            ],
+            className='row-bottom-margin'
+        )

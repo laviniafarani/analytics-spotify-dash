@@ -1,6 +1,6 @@
 from dash import Dash, html
 import dash_bootstrap_components as dbc
-from template import *
+from templates import *
 
 app = Dash(
     __name__,

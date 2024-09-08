@@ -14,7 +14,8 @@ def spotify_connection():
         'user-top-read',
         'user-library-read',
         'user-read-recently-played',
-        'user-read-currently-playing'
+        'user-read-currently-playing',
+        'user-read-private'
     ]
 
     sp = spotipy.Spotify(
